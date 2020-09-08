@@ -11,5 +11,10 @@ Todo:
     - email alert
 * Implement and deploy `v1`
 
-* Bridge IP: "192.168.1.10"
+
+TO-DOs:
+* Document, review, add comments
+* Implement GET endpoint on mock for lights color
+    - save state in Flask?
+* Figure out react server, another docker container?
 
