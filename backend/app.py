@@ -1,8 +1,12 @@
 import yaml
 import requests
 import time
+import os
 
-base_url = "http://192.168.1.10/api/8HHfyLAiPIn148hxtePbuIHi-KJVMg8eHu373-sb"
+host = os.getenv("BRIDGE_HOST")
+port = os.getenv("BRIDGE_PORT")
+base_url = f"http://{host}:{port}/api/8HHfyLAiPIn148hxtePbuIHi-KJVMg8eHu373-sb"
+print("\n******base_url*******\n", base_url)
 
 def main():
     i = 0
