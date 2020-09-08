@@ -11,3 +11,5 @@ Todo:
     - email alert
 * Implement and deploy `v1`
 
+* Bridge IP: "192.168.1.10"
+
