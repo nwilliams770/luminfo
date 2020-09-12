@@ -1,7 +1,10 @@
 import flask
+import flask_cors
 import os
 
 app = flask.Flask(__name__)
+flask_cors.CORS(app)
+
 
 _data = {}
 
