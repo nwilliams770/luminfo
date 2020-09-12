@@ -17,4 +17,5 @@ TO-DOs:
 * Implement GET endpoint on mock for lights color
     - save state in Flask?
 * Figure out react server, another docker container?
-
+* .dockerignore
+* upgrade run.sh to use docker-compose
