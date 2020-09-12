@@ -17,5 +17,9 @@ TO-DOs:
 * Implement GET endpoint on mock for lights color
     - save state in Flask?
 * Figure out react server, another docker container?
+    - get webpack running
+    - get sass loader in there
+    - how to dockerize react
+    - clean up how we are fetching, 3rd party library like axios?
 * .dockerignore
 * upgrade run.sh to use docker-compose
