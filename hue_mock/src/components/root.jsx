@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-const App = () => {
+const Root = () => {
     const [bgColor, setColor] = useState("white")
     useEffect(() => {
         setTimeout(() => {
@@ -10,10 +10,10 @@ const App = () => {
         }, 500);
     }, [bgColor])
     return (
-        <div id="app" style={{background: `${bgColor}`}}>
-            <h1>Hello from react i've changed</h1>
+        <div id="root" style={{background: `${bgColor}`}}>
+            <h1>Hello world!</h1>
         </div>
     )
 }
 
-export default App;
+export default Root;
