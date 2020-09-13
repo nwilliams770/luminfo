@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: './index.js',
+  entry: ['babel-polyfill', './index.js'],
   output: {
     path: path.resolve(__dirname + '/dist'),
     publicPath: '/',
@@ -18,7 +18,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
-      }
+      },
     ]
   },
   resolve: {
