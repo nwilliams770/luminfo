@@ -22,11 +22,15 @@ def root():
 def mock_light_colors():
     # TODO: implement me
     # return _data[1]['color']
-    colors = ["#ffffff", "red", "lightblue", "green", "cyan", "purple", "orange", "black"]
+    colors = ["ffffff", "ef8085", "83c7d5", "4bc084", "00ffff", "945cb4", "ff8b3d", "000000"]
     import random
-    c1 = random.choice(colors)
-    c2 = random.choice(colors)
-    return flask.jsonify({'color1': c1, 'color2': c2})
+    num_lights = random.randrange(1, 10)
+    payload = {}
+
+    for i in range(0, num_lights + 1):
+        payload[i] = random.choice(colors)
+
+    return flask.jsonify(payload)
 
 if __name__ == "__main__":
     app.debug = True
