@@ -42162,7 +42162,7 @@ var Bulb = function Bulb(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "bulb",
     style: {
-      background: "#".concat(props.color)
+      background: "".concat(props.color)
     }
   });
 };
@@ -42233,24 +42233,25 @@ var Simulator = function Simulator() {
             case 3:
               response = _context.sent;
               data = response.data;
+              console.log("data", data);
               updateColors(data);
               setTimeout(function () {
                 return fetchColors();
               }, 1000);
-              _context.next = 12;
+              _context.next = 13;
               break;
 
-            case 9:
-              _context.prev = 9;
+            case 10:
+              _context.prev = 10;
               _context.t0 = _context["catch"](0);
               console.log(_context.t0);
 
-            case 12:
+            case 13:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[0, 9]]);
+      }, _callee, null, [[0, 10]]);
     }));
     return _fetchColors.apply(this, arguments);
   }

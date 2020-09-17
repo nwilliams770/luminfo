@@ -6,7 +6,7 @@ import os
 host = os.getenv("BRIDGE_HOST")
 port = os.getenv("BRIDGE_PORT")
 base_url = f"http://{host}:{port}/api/8HHfyLAiPIn148hxtePbuIHi-KJVMg8eHu373-sb"
-print("\n******base_url*******\n", base_url)
+
 
 def main():
     i = 0
@@ -16,8 +16,8 @@ def main():
         i += 1
         time.sleep(0.1)
 
+
 def set_lights_to_bin(i):
-    print(i)
     # ones place
     l1 = (i % 2 == 1)
     # twos place
@@ -27,12 +27,9 @@ def set_lights_to_bin(i):
 
     response = requests.put(f'{base_url}/lights/1/state', json={'on': l1, "transitiontime": 0, "bri": 254}, timeout=3.0)
     response.raise_for_status()
-    print("response from light 1", response)
     response = requests.put(f'{base_url}/lights/2/state', json={'on': l2, "transitiontime": 0, "bri": 254}, timeout=3.0)
     response.raise_for_status()
-    print("response from light 2", response)
 
 
 if __name__ == "__main__":
-    print("about to run m8")
     main()
