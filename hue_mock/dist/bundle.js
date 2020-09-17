@@ -42233,7 +42233,6 @@ var Simulator = function Simulator() {
             case 3:
               response = _context.sent;
               data = response.data;
-              console.log("data", data);
               updateColors(data);
               setTimeout(function () {
                 return fetchColors();
@@ -42241,17 +42240,20 @@ var Simulator = function Simulator() {
               _context.next = 13;
               break;
 
-            case 10:
-              _context.prev = 10;
+            case 9:
+              _context.prev = 9;
               _context.t0 = _context["catch"](0);
               console.log(_context.t0);
+              setTimeout(function () {
+                return fetchColors();
+              }, 1000);
 
             case 13:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[0, 10]]);
+      }, _callee, null, [[0, 9]]);
     }));
     return _fetchColors.apply(this, arguments);
   }

@@ -13,13 +13,14 @@ Todo:
 
 
 TO-DOs:
-* Document, review, add comments
-* Implement GET endpoint on mock for lights color
-    - save state in Flask?
-* Figure out react server, another docker container?
-    - get webpack running
-    - get sass loader in there
-    - how to dockerize react
-    - clean up how we are fetching, 3rd party library like axios?
+* Settings App
+* Settings persistent storage
+* Bridge mock
+    - Make thread safe
+    - Support colors
+* Mock Hue
+    - Dockerize
+    - Research library for rate limiting // not using setTimeout
+* Upgrade build system to docker-compose
 * .dockerignore
-* upgrade run.sh to use docker-compose
+* Document, review, add comments

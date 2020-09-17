@@ -13,13 +13,13 @@ const Simulator = () => {
         try {
             const response = await axios.get('http://localhost:8000/mock_light_colors');
             const data = response.data;
-            console.log("data", data);
             updateColors(data);
 
             setTimeout(() => fetchColors(), 1000);
         }
         catch (err) {
             console.log(err);
+            setTimeout(() => fetchColors(), 1000);
         }
     }
 
