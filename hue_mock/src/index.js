@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import style from './stylesheets/application.scss';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 
 // We might also see something like:

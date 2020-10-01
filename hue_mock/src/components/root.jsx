@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Simulator from './simulator/simulator';
 
 const Root = () => {
@@ -7,7 +7,7 @@ const Root = () => {
             <h1>Hello world!</h1>
             <Simulator />
         </div>
-    )
-}
+    );
+};
 
 export default Root;
