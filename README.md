@@ -14,7 +14,10 @@ Todo:
 
 TO-DOs:
 * Settings App
-* Settings persistent storage
+    - Color mode
+    - Blinking mode
+    - Settings persistent storage
+    - find lightweight document DB/store
 * Bridge mock
     - Make thread safe
     - Support colors
