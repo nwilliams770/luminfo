@@ -2,15 +2,25 @@ import yaml
 import requests
 import time
 import os
+import flask
+import flask_cors
+import os
 
 host = os.getenv("BRIDGE_HOST")
 port = os.getenv("BRIDGE_PORT")
 base_url = f"http://{host}:{port}/api/8HHfyLAiPIn148hxtePbuIHi-KJVMg8eHu373-sb"
 
+app = flask.Flask(__name__)
+flask_cors.CORS(app)
+
+sample_settings_state = {"ambient": {"test": "test"}, "notifications": {"test": "test"}}
+
+@app.route('/settings', methods=['GET'])
+def settings_state():
+    return flask.jsonify(sample_settings_state)
 
 def main():
     i = 0
-
     while True:
         set_lights_to_bin(i)
         i += 1
@@ -32,4 +42,6 @@ def set_lights_to_bin(i):
 
 
 if __name__ == "__main__":
-    main()
+    # main()
+    app.debug = True
+    app.run(host='0.0.0.0', port=os.getenv("PORT"))

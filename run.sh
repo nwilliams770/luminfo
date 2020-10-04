@@ -10,6 +10,8 @@ REAL_BRIDGE_PORT=80
 MOCK_BRIDGE_HOST="0.0.0.0"
 MOCK_BRIDGE_PORT=8000
 
+BACKEND_PORT=8100
+
 # Stop any previously-ran instance
 ./shutdown.sh
 
@@ -26,4 +28,6 @@ else
     BRIDGE_PORT=$REAL_BRIDGE_PORT
 fi
 
-./backend/build.sh $BRIDGE_HOST $BRIDGE_PORT
+./backend/build.sh $BRIDGE_HOST $BRIDGE_PORT $BACKEND_PORT
+
+
