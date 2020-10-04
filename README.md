@@ -18,6 +18,7 @@ TO-DOs:
     - Blinking mode
     - Settings persistent storage
     - find lightweight document DB/store
+    - introducing redux
 * Bridge mock
     - Make thread safe
     - Support colors
