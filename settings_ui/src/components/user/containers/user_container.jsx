@@ -2,11 +2,15 @@ import React, {useEffect} from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { hydrateState } from '../../../redux/actions';
+import store from '../../../redux/store';
 
 const UserContainer = (props) => {
   useEffect(() => {
-    // fetchInitialState();
-    props.hydrateState();
+    fetchInitialState();
+    console.log("*******props!", props);
+    props.hydrateState().then(() => {
+      console.log("props*****", store.getState());
+    })
   }, [])
 
   async function fetchInitialState() {
