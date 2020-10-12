@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: './index.js',
+  mode: 'development',
   output: {
     path: path.resolve(__dirname + '/dist'),
     publicPath: '/',
@@ -25,5 +26,9 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   devtool: 'source-map',
-  watch: true
+  watch: true,
+  watchOptions: {
+    poll: true,
+    ignored: /node_modules/
+  }
 };

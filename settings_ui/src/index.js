@@ -11,7 +11,7 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 
 import { Provider } from 'react-redux';
-import store from './redux/store'; 
+import store from './redux/store';
 
 
 // We might also see something like:
