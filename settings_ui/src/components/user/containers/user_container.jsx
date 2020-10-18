@@ -4,12 +4,16 @@ import { connect } from 'react-redux';
 import { hydrateState } from '../../../redux/actions';
 import store from '../../../redux/store';
 
+import Accordion from '../../Accordion';
+
 const UserContainer = (props) => {
   useEffect(() => {
+    // spinner state true
     fetchInitialState();
     console.log("*******props!", props);
     props.hydrateState().then(() => {
       console.log("props*****", store.getState());
+      // spinner state false
     })
   }, [])
 
@@ -25,7 +29,12 @@ const UserContainer = (props) => {
   }
 
   return (
-    <div></div>
+    <div>
+      <Accordion />
+      <Accordion />
+      <Accordion />
+
+    </div>
   )
 };
 
