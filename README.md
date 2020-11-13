@@ -34,3 +34,9 @@ TO-DOs:
 * Upgrade build system to docker-compose
 * .dockerignore
 * Document, review, add comments
+
+Useful articles for future development:
+* https://smellycode.com/accordion-in-reactjs/
+* https://kentcdodds.com/blog/compound-components-with-react-hooks
+* https://www.merixstudio.com/blog/redux-vs-context-vs-local-component-state/
+* https://webpack.js.org/configuration/watch/ | https://www.thebasement.be/updating-to-babel-7.4/ | https://www.thebasement.be/working-with-babel-7-and-webpack/
